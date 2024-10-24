@@ -46,7 +46,7 @@ MIT license
 
 ## Ackowledgement
 
-- The nonconvex toy example, multi-MNIST classification, and emotion recognition experiments use the code from [EPO](https://github.com/dbmptr/EPOSearch).
-- The ASR experiment is modified from the toy example in [M2ASR](https://github.com/afmsaif/M2ASR).
+- The toy example, multi-MNIST classification, and emotion recognition benchmark experiments use the code from [EPO](https://github.com/dbmptr/EPOSearch).
+- The multi-lingual ASR experiment uses the code from [M2ASR](https://github.com/afmsaif/M2ASR) as a baseline.
 
 We thank the authors for providing the code and data. Please cite their works and ours if you use the code or data.
