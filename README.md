@@ -2,16 +2,14 @@
 
 This repository contains the code for the paper's experiments: ["FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning"]().
 
-In this work, we 
-
 
 
 # Environment setup
 
 1. Use the following command to install the dependencies
 ```
-conda create -n moo python=3.8
-conda activate moo
+conda create -n ferero python=3.8
+conda activate ferero
 conda install pytorch torchvision==0.9.0 torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 conda install numpy scipy seaborn tqdm
 conda install -c conda-forge cvxpy
