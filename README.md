@@ -2,7 +2,7 @@
 # FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning
 -->
 <div align="center">
-    <img alt="logo" src="./figures/logo.png" style="height: 110px;" />
+    <img alt="logo" src="./figures/logo.png" style="height: 120px;" />
 </div>
 
 <hr>
