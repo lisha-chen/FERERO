@@ -27,10 +27,19 @@ conda install -c conda-forge cvxpy
 
 ## Toy
 
+Go to folder toy_experiments
+
 ## Multi-MNIST
+
+Go to folder multiMNIST
 
 ## Emotion
 
+Go to folder
+
+## ASR
+
+Go to folder
 
 
 ## License
