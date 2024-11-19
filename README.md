@@ -1,4 +1,11 @@
+<!---
 # FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning
+-->
+<div align="center">
+    <img alt="logo" src="./figures/logo.png" style="height: 110px;" />
+</div>
+
+<hr>
 
 This repository contains the code for the paper's experiments: ["FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning"]().
 
