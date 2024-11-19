@@ -9,6 +9,8 @@
 
 This repository contains the code for the paper's experiments: ["FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning"]().
 
+We are continuing to update this repo.
+
 # Introduction
 
 # Environment setup
