@@ -7,8 +7,6 @@
 
 <hr>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=FERERO:Preference+Guided+MOL)](https://git.io/typing-svg)
-
 This repository contains the code for the paper's experiments: ["FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning"]().
 
 We are continuing to update this repo.
