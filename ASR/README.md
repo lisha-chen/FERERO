@@ -1,4 +1,8 @@
-# Multi-lingual Speech Recognition
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=F7E909&background=F7F7F7&center=true&vCenter=true&width=435&lines=F+E+R+E+R+O)](https://git.io/typing-svg)
+
+</div>
 
 ## Overview
 
