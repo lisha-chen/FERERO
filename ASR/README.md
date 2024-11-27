@@ -20,8 +20,7 @@ $$
 \min_{\theta} F(\theta) := [f_p(\theta), f_t^{\text{ch}}(\theta), f_t^{\text{en}}(\theta)]^\top 
 $$
 
-Subject to: 
-$$\(f_p(\theta) \leq \epsilon_1\), \(f_t^{\text{ch}}(\theta) - f_t^{\text{en}}(\theta) = \epsilon_2\)$$ 
+$$s.t.~\(f_p(\theta) \leq \epsilon_1\), \(f_t^{\text{ch}}(\theta) - f_t^{\text{en}}(\theta) = \epsilon_2\)$$ 
 
 For more details, see [Appendix H.1](#appendix).
 
