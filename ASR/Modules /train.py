@@ -21,13 +21,12 @@ import torch.nn.utils.rnn as rnn_utils
 from torch.utils.data import Dataset, DataLoader
 import sentencepiece as spm
 import time
-from data import LibriSpeechDataset, ASR
+from data import LibriSpeechDataset, ASR, DataProcessor
 from utils import InfoNCE
 from decode import SentencePieceTransform
 ###############  hyper-parameters ############
 
 seed = np.random.seed(42)
-
 
 def get_audio_transforms():
   time_masks = [torchaudio.transforms.TimeMasking(time_mask_param=15, p=0.05) for _ in range(10)]
@@ -80,6 +79,11 @@ def get_audio_files_flac(data_dir):
 
 def get_audio_files_wav(data_dir):
     return [os.path.join(root, file) for root, dirs, files in os.walk(data_dir) for file in files if file.lower().endswith('.wav')]
+
+
+sentencepiece_transform_e = SentencePieceTransform("libri1000u.model")
+sentencepiece_transform_c = SentencePieceTransform("aishell_unigram5000_model.model")
+
 
 if __name__ == "__main__":
     # Hyperparameters
