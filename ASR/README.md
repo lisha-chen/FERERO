@@ -21,12 +21,7 @@ $$
 $$
 
 Subject to: 
-$$
-\(f_p(\theta) \leq \epsilon_1\), \(f_t^{\text{ch}}(\theta) - f_t^{\text{en}}(\theta) = \epsilon_2\)
-$$ 
-
-
--  (balance language losses, \(\epsilon_2 = 0.5\))  (representation quality, \(\epsilon_1 = 1.2\))
+$$\(f_p(\theta) \leq \epsilon_1\), \(f_t^{\text{ch}}(\theta) - f_t^{\text{en}}(\theta) = \epsilon_2\)$$ 
 
 For more details, see [Appendix H.1](#appendix).
 
