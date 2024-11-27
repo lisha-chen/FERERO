@@ -89,3 +89,87 @@ class ASR(Dataset):
 
         return x, y
 
+
+class DataProcessor:
+    def __init__(self, train_audio_transforms, valid_audio_transforms, sp_transform_e=None, sp_transform_c=None):
+        """
+        Initializes the DataProcessor class.
+
+        Args:
+            train_audio_transforms (callable): Transformations for training data.
+            valid_audio_transforms (callable): Transformations for validation/test data.
+            sp_transform_e (callable, optional): SentencePiece transformer for English.
+            sp_transform_c (callable, optional): SentencePiece transformer for another language.
+        """
+        self.train_audio_transforms = train_audio_transforms
+        self.valid_audio_transforms = valid_audio_transforms
+        self.sp_transform_e = sp_transform_e
+        self.sp_transform_c = sp_transform_c
+
+    def data_processing(self, data, data_type="train"):
+        """
+        Processes data for training or validation/test.
+
+        Args:
+            data (list): Input data containing waveform and utterance information.
+            data_type (str): 'train' or 'valid'/'test'.
+
+        Returns:
+            tuple: Processed spectrograms, labels, input_lengths, label_lengths.
+        """
+        spectrograms = []
+        labels = []
+        input_lengths = []
+        label_lengths = []
+
+        for (waveform, _, utterance, _, _, _) in data:
+            if data_type == 'train':
+                spec = self.train_audio_transforms(waveform).squeeze(0).transpose(0, 1)
+            elif data_type in ['test', 'valid']:
+                spec = self.valid_audio_transforms(waveform).squeeze(0).transpose(0, 1)
+            else:
+                raise ValueError("data_type must be 'train', 'valid', or 'test'.")
+            spectrograms.append(spec)
+            label = torch.Tensor(self.sp_transform_e.text_to_int(utterance))
+            labels.append(label)
+            input_lengths.append(spec.shape[0])
+            label_lengths.append(len(label))
+
+        spectrograms = nn.utils.rnn.pad_sequence(spectrograms, batch_first=True).unsqueeze(1).transpose(2, 3)
+        labels = nn.utils.rnn.pad_sequence(labels, batch_first=True)
+
+        return spectrograms, labels, input_lengths, label_lengths
+
+    def data_processing_c(self, data, data_type="train"):
+        """
+        Processes data with a different SentencePiece transformer.
+
+        Args:
+            data (list): Input data containing waveform and utterance information.
+            data_type (str): 'train' or 'valid'/'test'.
+
+        Returns:
+            tuple: Processed spectrograms, labels, input_lengths, label_lengths.
+        """
+        spectrograms = []
+        labels = []
+        input_lengths = []
+        label_lengths = []
+
+        for (waveform, utterance) in data:
+            if data_type == 'train':
+                spec = self.train_audio_transforms(waveform).squeeze(0).transpose(0, 1)
+            elif data_type in ['test', 'valid']:
+                spec = self.valid_audio_transforms(waveform).squeeze(0).transpose(0, 1)
+            else:
+                raise ValueError("data_type must be 'train', 'valid', or 'test'.")
+            spectrograms.append(spec)
+            label = torch.Tensor(self.sp_transform_c.text_to_int(utterance))
+            labels.append(label)
+            input_lengths.append(spec.shape[0])
+            label_lengths.append(len(label))
+
+        spectrograms = nn.utils.rnn.pad_sequence(spectrograms, batch_first=True).unsqueeze(1).transpose(2, 3)
+        labels = nn.utils.rnn.pad_sequence(labels, batch_first=True)
+
+        return spectrograms, labels, input_lengths, label_lengths
