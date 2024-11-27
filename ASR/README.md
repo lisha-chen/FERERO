@@ -2,15 +2,15 @@
 
 ## Overview
 
-We evaluate our proposed method for multi-objective fine-tuning of pre-trained multi-lingual speech models. Experiments were conducted on the **Librispeech (100 hours)** [[3]](#3) and **AISHELL v1** [[4]](#4) datasets for multi-lingual speech recognition.
+We apply the proposed method to the multi-objective finetuning of pre-trained multilingual speech models. Experiments are conducted on the **Librispeech (100 hours)** [[3]](#3) and **AISHELL v1** [[4]](#4) datasets for multilingual speech recognition.
 
-- **Model Architecture**: A conformer model with 8 blocks was used.  
+- **Model Architecture**: A conformer model with 8 blocks is used.  
 - **Model Parameters**:  
   - Total: ~64.5M  
   - Encoder: ~58.4M  
   - Classification Layer: ~6.1M  
 
-We address multi-objective learning by considering the following loss functions:  
+We consider the following objectives for multi-objective learning:  
 1. **Connectionist Temporal Classification (CTC)** losses for Chinese and English $\(f_t^{\text{ch}}\) and \(f_t^{\text{en}}\)$.  
 2. **Contrastive Predictive Coding (CPC)** loss $\(f_p\)$ for representation learning.  
 
@@ -26,11 +26,11 @@ For more details, see [Appendix H.1](#appendix).
 
 ---
 
-## Results: Word Error Rate (WER)
+## Results: Word Error Rate (WER) and Character Error Rate (CER)
 
 The following results are based on experiments with **Librispeech** and **AISHELL v1** datasets.
 
-| Model                  | Librispeech (WER%) | AISHELL v1 (WER%) | Average WER (%) |
+| Model                  | Librispeech (WER%) | AISHELL v1 (CER%) | Average(%) |
 |------------------------|--------------------|--------------------|-----------------|
 | **Komatsu et al. [1]** | 7.11              | -                  | -               |
 | **w/o CPC [2]**       | 11.8              | 10.2               | 11.0            |
