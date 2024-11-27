@@ -7,6 +7,8 @@
 
 <hr>
 
+https://github.com/lisha-chen/FERERO/blob/main/ASR/Modules%20/decode.py
+
 This repository contains the code for the paper's experiments: ["FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning"]().
 
 We are continuing to update this repo.
