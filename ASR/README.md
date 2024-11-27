@@ -11,7 +11,7 @@ We evaluate our proposed method for multi-objective fine-tuning of pre-trained m
   - Classification Layer: ~6.1M  
 
 We address multi-objective learning by considering the following loss functions:  
-1. **Connectionist Temporal Classification (CTC)** losses for Chinese and English $\(f^{\text{ch}}_(t)\) and \(f^{\text{en}}_(t)\)$.  
+1. **Connectionist Temporal Classification (CTC)** losses for Chinese and English $\(f_t^{\text{ch}}\) and \(f_t^{\text{en}}\)$.  
 2. **Contrastive Predictive Coding (CPC)** loss $\(f_p\)$ for representation learning.  
 
 Our optimization objective is defined as:
