@@ -1,13 +1,8 @@
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://git.io/typing-svg">
-        <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=F7CE6C&background=08080762&center=true&vCenter=true&width=435&lines=F+E+R+E+R+O" alt="Typing SVG">
-      </a>
-    </td>
-  </tr>
-</table>
+<div align="center">
 
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=F7CE6C&background=08080762&center=true&vCenter=true&width=435&lines=F+E+R+E+R+O)](https://git.io/typing-svg)
+
+</div>
 
 ## Overview
 
