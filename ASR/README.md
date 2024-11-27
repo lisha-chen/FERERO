@@ -16,9 +16,9 @@ We address multi-objective learning by considering the following loss functions:
 
 Our optimization objective is defined as:
 
-\[
+$$
 \min_{\theta} F(\theta) := [f_p(\theta), f_{\text{ch}}(t)(\theta), f_{\text{en}}(t)(\theta)]^\top 
-\]
+$$
 
 Subject to:  
 - \(f_p(\theta) \leq \epsilon_1\) (representation quality, \(\epsilon_1 = 1.2\))  
