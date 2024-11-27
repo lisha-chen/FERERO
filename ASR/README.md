@@ -20,9 +20,10 @@ $$
 \min_{\theta} F(\theta) := [f_p(\theta), f_t^{\text{ch}}(\theta), f_t^{\text{en}}(\theta)]^\top 
 $$
 
-Subject to:  
-- $\(f_p(\theta) \leq \epsilon_1\) (representation quality, \(\epsilon_1 = 1.2\))$ 
-- \(f_{\text{ch}}(t)(\theta) - f_{\text{en}}(t)(\theta) = \epsilon_2\) (balance language losses, \(\epsilon_2 = 0.5\))  
+Subject to: $\(f_p(\theta) \leq \epsilon_1\), \(f_{\text{ch}}(t)(\theta) - f_{\text{en}}(t)(\theta) = \epsilon_2\)$ 
+
+
+-  (balance language losses, \(\epsilon_2 = 0.5\))  (representation quality, \(\epsilon_1 = 1.2\))
 
 For more details, see [Appendix H.1](#appendix).
 
