@@ -15,7 +15,4 @@ class SentencePieceTransform:
         """ Use the SentencePiece tokenizer to convert integer labels to a text sequence """
         return self.sp.decode(labels)
 
-sentencepiece_transform_e = SentencePieceTransform("libri1000u.model")
-sentencepiece_transform_c = SentencePieceTransform("aishell_unigram5000_model.model")
-
 
