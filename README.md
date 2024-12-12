@@ -16,7 +16,7 @@
 
 This repository contains the code for the paper's experiments: ["FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning"]().
 
-We are continuing to update this repo.
+We continuously update this repo.
 
 # Introduction
 
@@ -36,12 +36,12 @@ conda install -c conda-forge cvxpy
 
 ## Toy
 
-Go to folder toy_experiments
+Go to folder toy_experiments, and follow the instructions therein.
 
 
 ## ASR
 
-Go to folder ASR
+Go to folder ASR, and follow the instructions therein.
 
 
 ## License
