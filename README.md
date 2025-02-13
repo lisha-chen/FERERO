@@ -2,7 +2,7 @@
 # FERERO: A Flexible Framework for Preference-Guided Multi-Objective Learning
 -->
 <div align="center">
-    <img alt="logo" src="./figures/logo.png" style="height: 150px;" />
+    <img alt="logo" src="./figures/logo.png" style="height: 120px;" />
 </div>
 
 <hr>
@@ -27,8 +27,8 @@ We continuously update this repo.
 conda create -n ferero python=3.8
 conda activate ferero
 conda install pytorch torchvision==0.9.0 torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
-conda install numpy scipy seaborn tqdm
-conda install -c conda-forge cvxpy
+conda install numpy scipy seaborn tqdm autograd==1.3
+conda install -c conda-forge cvxpy cvxopt matplotlib-label-lines
 ```
 
 
@@ -38,6 +38,9 @@ conda install -c conda-forge cvxpy
 
 Go to folder toy_experiments, and follow the instructions therein.
 
+## multiMNIST image classification
+
+Go to folder multiMNIST, and follow the instructions therein.
 
 ## ASR
 
@@ -62,7 +65,7 @@ MIT license
 
 ## Ackowledgement
 
-- The toy example, multi-MNIST classification, and emotion recognition experiments use the code from [EPO](https://github.com/dbmptr/EPOSearch).
+- The toy example, multi-MNIST classification, and emotion recognition experiments use the code from PMTL and [EPO](https://github.com/dbmptr/EPOSearch).
 - The multi-lingual ASR experiment uses the code from [M2ASR](https://github.com/afmsaif/M2ASR) as a baseline.
 
 We thank the authors for providing the code and data. Please cite their works and ours if you use the code or data.
